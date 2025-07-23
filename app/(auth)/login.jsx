@@ -1,13 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Pressable } from 'react-native'
 import { Link } from 'expo-router'
 import React from 'react'
 
+//import ThemedButton from '../../components/ThemedButton'
+
 const login = () => {
+  const handleSumbit = () => {
+      console.log('login form submitted')
+  }
   return (
     <View style = {styles.container}>
 
       
       <Text style = {styles.title}>Login to your account</Text>
+      <Pressable
+        onPress = {handleSumbit}
+        style = {({pressed}) => [styles.btn, pressed && styles.pressed]}>
+
+        <Text style={{color: '#f2f2f2'}}>Login</Text>
+
+      </Pressable>
+
+      
       <Link href='/register'>
         <Text style = {{ textAlign: 'center'}}> Register Instead </Text>
       
@@ -30,5 +44,25 @@ const styles = StyleSheet.create({
   title:{
     fontWeight: 'bold',
     fontSize: 18
+  },
+
+  btn:{
+    backgroundColor: '#253b32ff',
+    padding: 15,
+    borderRadius: 15
+  },
+
+  pressed:{
+    opacity: 0.8
   }
+
 })
+
+
+/*<Pressable
+        onPress = {handleSumbit}
+        style = {({pressed}) => [styles.btn, pressed && styles.pressed]}>
+
+        <Text style={{color: '#f2f2f2'}}>Login</Text>
+
+      </Pressable> */
