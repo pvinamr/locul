@@ -9,7 +9,8 @@ const Home  = () => {
       <Image source={Logo} style={styles.img} />
       <Text style = {styles.title}>Home</Text>
       <Text style = {{marginTop: 10, marginBottom: 30}}>Locul App</Text>
-      <Link href = "/about" style = {styles.link}>About Page</Link>
+      <Link href = "/login" style = {styles.link}>Login Page</Link>
+      <Link href = "/register" style = {styles.link}>Register Page</Link>
     </View>
   )
 }

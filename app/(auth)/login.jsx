@@ -1,21 +1,26 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import { Link } from 'expo-router'
+import React from 'react'
 
-const about = () => {
+const login = () => {
   return (
     <View style = {styles.container}>
-      <Text style = {styles.title}>About Page</Text>
-      <Link href="/" style = {styles.link}>Back Home</Link>
+
+      
+      <Text style = {styles.title}>Login to your account</Text>
+      <Link href='/register'>
+        <Text style = {{ textAlign: 'center'}}> Register Instead </Text>
+      
+      
+      </Link>
     </View>
-    
   )
 }
 
-export default about
+export default login
 
 const styles = StyleSheet.create({
-    container: {
+  container: {
     //defining css properties
     flex: 1, //takes up screen from top to bottom
     alignItems: 'center',
@@ -25,10 +30,5 @@ const styles = StyleSheet.create({
   title:{
     fontWeight: 'bold',
     fontSize: 18
-  },
-
-  link:{
-    marginVertical: 10,
-    borderBottomWidth: 1
   }
 })
